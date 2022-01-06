@@ -97,14 +97,7 @@ export class Core {
       await this.providerController.connectToCachedProvider();
       return;
     }
-    if (
-      this.userOptions &&
-      this.userOptions.length === 1 &&
-      this.userOptions[0].name
-    ) {
-      await this.userOptions[0].onClick();
-      return;
-    }
+
     await this._toggleModal();
   }
 
